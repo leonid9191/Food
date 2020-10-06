@@ -146,7 +146,13 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
     window.addEventListener('scroll', showModalByScroll);
+<<<<<<< HEAD
 //sdfghjklkjhhj
+=======
+
+    //food cards 
+    
+>>>>>>> f68de98dd6d9e7908db40876b8ffb5bb713b0275
     //Forms
 
     const forms = document.querySelectorAll('form');
