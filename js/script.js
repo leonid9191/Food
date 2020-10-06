@@ -147,6 +147,8 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     window.addEventListener('scroll', showModalByScroll);
 
+    //food cards 
+    
     //Forms
 
     const forms = document.querySelectorAll('form');
