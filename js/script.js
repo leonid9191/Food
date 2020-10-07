@@ -225,21 +225,21 @@ window.addEventListener('DOMContentLoaded', function () {
         fail: "Fail"
     };
 
-    forms.forEach(form, {
+    forms.forEach(form => {
         postData(form);
     });
     function postData(form){
         form.addEventListener('submit', (e) => {
-            e.prevenDefault();//it's a function for don't reload page after sending form
+            e.preventDefault();//it's a function for don't reload page after sending form
             const statusMessage = document.createElement('div');
             statusMessage.classList.add('status');
             statusMessage.textContent = message.loading;
             form.append(statusMessage);
 
-            const request = XMLHttpRequest();
+            const request = new XMLHttpRequest();
             request.open('POST', 'server.php');
 
-            request.setRequestHeader('Content-type', 'multipart/form-data');
+            //request.setRequestHeader('Content-type', 'multipart/form-data');
             const formData = new FormData(form);
             request.send(formData);
 
@@ -247,6 +247,10 @@ window.addEventListener('DOMContentLoaded', function () {
                 if (request.status === 200){
                     console.log(request.response);
                     statusMessage.textContent = message.success;
+                    form.reset();
+                    setTimeout(() =>{
+                        statusMessage.remove();
+                    }, 2000);
                 }else{
                     statusMessage.textContent = message.fail;
                 }
