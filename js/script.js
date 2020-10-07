@@ -219,11 +219,40 @@ window.addEventListener('DOMContentLoaded', function () {
     //Forms
 
     const forms = document.querySelectorAll('form');
+    const message = {
+        loading: "loading",
+        success: "Thank you",
+        fail: "Fail"
+    };
 
+    forms.forEach(form, {
+        postData(form);
+    });
     function postData(form){
         form.addEventListener('submit', (e) => {
             e.prevenDefault();//it's a function for don't reload page after sending form
-            
+            const statusMessage = document.createElement('div');
+            statusMessage.classList.add('status');
+            statusMessage.textContent = message.loading;
+            form.append(statusMessage);
+
+            const request = XMLHttpRequest();
+            request.open('POST', 'server.php');
+
+            request.setRequestHeader('Content-type', 'multipart/form-data');
+            const formData = new FormData(form);
+            request.send(formData);
+
+            request.addEventListener('load', () =>{
+                if (request.status === 200){
+                    console.log(request.response);
+                    statusMessage.textContent = message.success;
+                }else{
+                    statusMessage.textContent = message.fail;
+                }
+            });
+
+
         });
     }
 });
