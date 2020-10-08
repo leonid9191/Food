@@ -237,26 +237,31 @@ window.addEventListener('DOMContentLoaded', function () {
                 display: block;
                 margin: 0 auto;
             `;
-
             form.append(statusMessage);
-
-            const request = new XMLHttpRequest();
-            request.open('POST', 'server.php');
-
-            //request.setRequestHeader('Content-type', 'multipart/form-data');
             const formData = new FormData(form);
-            request.send(formData);
-            //check if sending succesfully, show to user message about it 
-            request.addEventListener('load', () => {
-                if (request.status === 200) {
-                    console.log(request.response);
-                    showThanksModal(message.success);
-                    statusMessage.remove();
-                    form.reset();
-                } else {
-                    showThanksModal(message.fail);
-                }
+            //transformation to JSON format
+            const object = {};
+            formData.forEach(function (value, key) {
+                object[key] = value;
             });
+            //send to the server
+            fetch('server.php', {
+                method: "POST",
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(object)
+            }).then(data => data.text())
+                .then(data => {
+                    console.log(data);
+                    showThanksModal(message.success);//show to user message
+                    statusMessage.remove();
+
+                }).catch(() => {
+                    showThanksModal(message.fail);//show to user message
+                }).finally(() => {
+                    form.reset();
+                });
         });
     }
 
@@ -282,6 +287,6 @@ window.addEventListener('DOMContentLoaded', function () {
             prevModalDialog.classList.remove('hide');
             closeModal();
         }, 4000);
-
     }
+
 });
