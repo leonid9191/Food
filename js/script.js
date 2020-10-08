@@ -98,8 +98,7 @@ window.addEventListener('DOMContentLoaded', function () {
     // Modal
 
     const modalTrigger = document.querySelectorAll('[data-modal]'),
-        modal = document.querySelector('.modal'),
-        modalCloseBtn = document.querySelector('[data-close]');
+        modal = document.querySelector('.modal');
 
     modalTrigger.forEach(btn => {
         btn.addEventListener('click', function () {
@@ -122,10 +121,9 @@ window.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = '';
     }
 
-    modalCloseBtn.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
+        if (e.target === modal || e.target.getAttribute('data-close') == "") {
             closeModal();
         }
     });
@@ -157,12 +155,12 @@ window.addEventListener('DOMContentLoaded', function () {
             this.price = price;
             this.classes = classes;
             this.parent = document.querySelector(parentSelector);
-            this.transfer = 27;
-            this.changeToUAH(); 
+            this.transfer = 72;
+            this.changeToRub();
         }
 
-        changeToUAH() {
-            this.price = this.price * this.transfer; 
+        changeToRub() {
+            this.price = this.price * this.transfer;
         }
 
         render() {
@@ -182,7 +180,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 <div class="menu__item-divider"></div>
                 <div class="menu__item-price">
                     <div class="menu__item-cost">Цена:</div>
-                    <div class="menu__item-total"><span>${this.price}</span> грн/день</div>
+                    <div class="menu__item-total"><span>${this.price}</span> RUB/day</div>
                 </div>
             `;
             this.parent.append(element);
@@ -215,25 +213,31 @@ window.addEventListener('DOMContentLoaded', function () {
         21,
         ".menu .container"
     ).render();
-    
+
     //Forms
 
-    const forms = document.querySelectorAll('form');
+    const forms = document.querySelectorAll('form');//all form for callback
     const message = {
-        loading: "loading",
-        success: "Thank you",
-        fail: "Fail"
+        loading: "img/forms/spinner.svg",
+        success: "Thank you, we will call you.",
+        fail: "Fail...."
     };
-
+    //append "open modal" to all the forms button
     forms.forEach(form => {
         postData(form);
     });
-    function postData(form){
+
+
+    function postData(form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();//it's a function for don't reload page after sending form
-            const statusMessage = document.createElement('div');
-            statusMessage.classList.add('status');
-            statusMessage.textContent = message.loading;
+            let statusMessage = document.createElement('img');
+            statusMessage.src = message.loading;
+            statusMessage.style.cssText = `
+                display: block;
+                margin: 0 auto;
+            `;
+
             form.append(statusMessage);
 
             const request = new XMLHttpRequest();
@@ -242,21 +246,42 @@ window.addEventListener('DOMContentLoaded', function () {
             //request.setRequestHeader('Content-type', 'multipart/form-data');
             const formData = new FormData(form);
             request.send(formData);
-
-            request.addEventListener('load', () =>{
-                if (request.status === 200){
+            //check if sending succesfully, show to user message about it 
+            request.addEventListener('load', () => {
+                if (request.status === 200) {
                     console.log(request.response);
-                    statusMessage.textContent = message.success;
+                    showThanksModal(message.success);
+                    statusMessage.remove();
                     form.reset();
-                    setTimeout(() =>{
-                        statusMessage.remove();
-                    }, 2000);
-                }else{
-                    statusMessage.textContent = message.fail;
+                } else {
+                    showThanksModal(message.fail);
                 }
             });
-
-
         });
+    }
+
+    //function show to user status message about loading form
+    function showThanksModal(message) {
+        const prevModalDialog = document.querySelector('.modal__dialog');
+
+        prevModalDialog.classList.add('hide');
+        openModal();
+
+        const thanksModal = document.createElement('div');//это модальное окно мы меняем вместо формы заявки
+        thanksModal.classList.add('modal__dialog');
+        thanksModal.innerHTML = `
+        <div class="modal__content">
+            <div class="modal__close" data-close>×</div>
+            <div class="modal__title">${message}</div>
+        </div>
+        `;
+        document.querySelector('.modal').append(thanksModal);
+        setTimeout(() => {
+            thanksModal.remove();
+            prevModalDialog.classList.add('show');
+            prevModalDialog.classList.remove('hide');
+            closeModal();
+        }, 4000);
+
     }
 });
