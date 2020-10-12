@@ -1,8 +1,13 @@
-import {closeModal, openModal} from './modal';
-function forms () {
-    //Forms
+import {
+    closeModal,
+    openModal
+} from './modal';
 
-    const forms = document.querySelectorAll('form'); //all form for callback
+import {postData} from '../services/services';
+
+function forms(formSelector, modalTimerId) {
+
+    const forms = document.querySelectorAll(formSelector); //all form for callback
     const message = {
         loading: "img/forms/spinner.svg",
         success: "Thank you, we will call you.",
@@ -13,18 +18,6 @@ function forms () {
         bindPostData(form);
     });
 
-    //Send data to the server
-    const postData = async (url, data) => {
-        const res = await fetch(url, {
-            //send to the server
-            method: "POST",
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: data
-        });
-        return await res.json();
-    };
 
     //Привязка к формам
     function bindPostData(form) {
@@ -62,7 +55,7 @@ function forms () {
         const prevModalDialog = document.querySelector('.modal__dialog');
 
         prevModalDialog.classList.add('hide');
-        openModal();
+        openModal('.modal', modalTimerId);
 
         const thanksModal = document.createElement('div'); //это модальное окно мы меняем вместо формы заявки
         thanksModal.classList.add('modal__dialog');
@@ -77,7 +70,7 @@ function forms () {
             thanksModal.remove();
             prevModalDialog.classList.add('show');
             prevModalDialog.classList.remove('hide');
-            closeModal();
+            closeModal('.modal');
         }, 4000);
     }
 }
