@@ -1,4 +1,6 @@
 'use strict';
+require('es6-promise-polyfill').Promise;
+import 'nodelist-foreach-polyfill';
 import tabs from './modules/tabs';
 import modal from './modules/modal';
 import cards from './modules/cards';
