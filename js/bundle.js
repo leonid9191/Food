@@ -1,15 +1,21 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./js/modules/calculator.js":
 /*!**********************************!*\
   !*** ./js/modules/calculator.js ***!
   \**********************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 107:0-14 */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 function calculator() {
 
     //calculator
@@ -116,7 +122,7 @@ function calculator() {
     getDynamicInformation('#weight');
     getDynamicInformation('#age');
 }
-module.exports = calculator;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (calculator);
 
 /***/ }),
 
@@ -124,11 +130,16 @@ module.exports = calculator;
 /*!*****************************!*\
   !*** ./js/modules/cards.js ***!
   \*****************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 66:0-14 */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 function cards() {
     //Cards
     class MenuCard {
@@ -194,7 +205,7 @@ function cards() {
         });
 }
 
-module.exports = cards;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cards);
 
 /***/ }),
 
@@ -202,11 +213,16 @@ module.exports = cards;
 /*!*****************************!*\
   !*** ./js/modules/forms.js ***!
   \*****************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 84:0-14 */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 function forms () {
     //Forms
 
@@ -290,7 +306,7 @@ function forms () {
     }
 }
 
-module.exports = forms;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (forms);
 
 /***/ }),
 
@@ -298,11 +314,16 @@ module.exports = forms;
 /*!*****************************!*\
   !*** ./js/modules/modal.js ***!
   \*****************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 54:0-14 */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 function modal() {
         // Modal
 
@@ -356,7 +377,7 @@ function modal() {
 
 }
 
-module.exports = modal;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (modal);
 
 /***/ }),
 
@@ -364,11 +385,16 @@ module.exports = modal;
 /*!******************************!*\
   !*** ./js/modules/slider.js ***!
   \******************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 147:0-14 */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 function sliders() {
     //Sliders
     const slides = document.querySelectorAll('.offer__slide'),
@@ -515,7 +541,7 @@ function sliders() {
     });
 }
 
-module.exports = sliders;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sliders);
 
 /***/ }),
 
@@ -523,11 +549,16 @@ module.exports = sliders;
 /*!****************************!*\
   !*** ./js/modules/tabs.js ***!
   \****************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 40:0-14 */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 function tabs() {
     // Tabs
     let tabs = document.querySelectorAll('.tabheader__item'),
@@ -567,7 +598,7 @@ function tabs() {
     });
 }
 
-module.exports = tabs;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tabs);
 
 /***/ }),
 
@@ -575,11 +606,16 @@ module.exports = tabs;
 /*!*****************************!*\
   !*** ./js/modules/timer.js ***!
   \*****************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 58:0-14 */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 function timer () {
     
     // Timer
@@ -637,7 +673,46 @@ function timer () {
     setClock('.timer', deadline);
 }
 
-module.exports = timer;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (timer);
+
+/***/ }),
+
+/***/ "./js/script.js":
+/*!**********************!*\
+  !*** ./js/script.js ***!
+  \**********************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js");
+/* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/modal */ "./js/modules/modal.js");
+/* harmony import */ var _modules_cards__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/cards */ "./js/modules/cards.js");
+/* harmony import */ var _modules_calculator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/calculator */ "./js/modules/calculator.js");
+/* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js");
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js");
+/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/timer */ "./js/modules/timer.js");
+
+
+
+
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_0__.default)();
+    (0,_modules_modal__WEBPACK_IMPORTED_MODULE_1__.default)();
+    (0,_modules_cards__WEBPACK_IMPORTED_MODULE_2__.default)();
+    (0,_modules_calculator__WEBPACK_IMPORTED_MODULE_3__.default)();
+    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_4__.default)();
+    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_5__.default)();
+    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_6__.default)();
+});
 
 /***/ })
 
@@ -667,33 +742,39 @@ module.exports = timer;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-(() => {
-"use strict";
-/*!**********************!*\
-  !*** ./js/script.js ***!
-  \**********************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-
-window.addEventListener('DOMContentLoaded', () => {
-    const tabs = __webpack_require__(/*! ./modules/tabs */ "./js/modules/tabs.js"),
-        modal = __webpack_require__(/*! ./modules/modal */ "./js/modules/modal.js"),
-        cards = __webpack_require__(/*! ./modules/cards */ "./js/modules/cards.js"),
-        calculator = __webpack_require__(/*! ./modules/calculator */ "./js/modules/calculator.js"),
-        forms = __webpack_require__(/*! ./modules/forms */ "./js/modules/forms.js"),
-        slider = __webpack_require__(/*! ./modules/slider */ "./js/modules/slider.js"),
-        timer = __webpack_require__(/*! ./modules/timer */ "./js/modules/timer.js");
-
-    tabs();
-    modal();
-    cards();
-    calculator();
-    forms();
-    slider();
-    timer();
-});
-})();
-
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	// startup
+/******/ 	// Load entry module
+/******/ 	__webpack_require__("./js/script.js");
+/******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
